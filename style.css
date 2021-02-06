@@ -1,14 +1,17 @@
-#main{
+#main {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     padding: 50px;
     grid-gap: 10px;
 }
-.infoDiv{
-    background:rgb(224, 174, 224);
+
+.infoDiv {
+    background: rgb(224, 174, 224);
     border-radius: 20px;
     padding: 10px;
     text-align: center;
 }
-.countryName{
+
+.countryName {
+    
 }
