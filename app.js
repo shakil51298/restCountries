@@ -13,7 +13,7 @@ function shakil(all) {
         const countryInfo = `
             <h3 class="countryName">${country.name}</h3>
             <p class="capital">${country.capital}</p>
-            <button onclick="showDetails('${country.name}')" class="btn btn-success">Details</button>
+            <button onclick="showDetails('${country.name}')" class="btn btn-success"><a href ="#hide" style="text-decoration:none;color:white"> Details</a></button>
         `
         items.innerHTML = countryInfo;
         mainDiv.appendChild(items);
@@ -25,6 +25,9 @@ function showDetails(name) {
     fetch(`https://restcountries.eu/rest/v2/name/${name}`)
         .then(Response => Response.json())
         .then(json => Details(json))
+
+        const hideDetails = document.getElementById('hide');
+        hideDetails.style.display = 'block';
 
     function Details(country){
         const FlagImg = document.getElementById('flagImg');
