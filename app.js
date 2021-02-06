@@ -26,9 +26,6 @@ function showDetails(name) {
         .then(Response => Response.json())
         .then(json => Details(json))
 
-        const hideDetails = document.getElementById('hide');
-        hideDetails.style.display = 'block';
-
     function Details(country){
         const FlagImg = document.getElementById('flagImg');
         FlagImg.src = country[0].flag;
